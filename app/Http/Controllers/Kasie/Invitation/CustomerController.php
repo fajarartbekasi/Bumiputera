@@ -18,12 +18,7 @@ class CustomerController extends Controller
         })->get();
 
         return Datatables::of($users)
-                    ->addColumn('action', function($row){
-                        return '
-
-                                <a href="http://bumiputera.test/kasie/cek/detail/informasi/penutupan/status/waitting-list/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Show</a>
-                            ';
-                        })->editColumn('id', 'ID: @{{$id}}')->make(true);
+                    ->make(true);
     }
     public function index()
     {

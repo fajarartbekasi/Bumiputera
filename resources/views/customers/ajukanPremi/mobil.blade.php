@@ -88,6 +88,7 @@
                     <table class="table table-borderless">
                         <thead>
                             <tr>
+                                <th>UP</th>
                                 <th>Wilayah 1</th>
                                 <th>Wilayah 2</th>
                                 <th>Wilayah 3</th>
@@ -97,6 +98,7 @@
                         <tbody>
                             @foreach ($premisMobil as $getType)
                             <tr>
+                                <td>{{$getType->premis()->first()->price}}</td>
                                 <td>{{$getType->premis()->first()->premi_1}}</td>
                                 <td>{{$getType->premis()->first()->premi_2}}</td>
                                 <td>{{$getType->premis()->first()->premi_3}}</td>

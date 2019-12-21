@@ -85,7 +85,7 @@
 
                                 <h5 class="text-muted">Total pengajuan yang anda lakukan adalah :
                                 </h5>
-                                <h5 class="text-info ml-2 font-weight-bold">70</h5>
+                                <h5 class="text-info ml-2 font-weight-bold">{{$getTotalPengajuanUser}}</h5>
                             </div>
 
                             <div class="">

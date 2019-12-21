@@ -31,8 +31,10 @@ class HomeController extends Controller
         $hitungPengajuan = Pengajuan::where('status', 'verifikasi pembayaran')->count();
         $hitung= Pengajuan::all()->count();
 
+        $getTotalPengajuanUser = Pengajuan::with('user')->where('user_id', $user)->count();
+
         $data = Pengajuan::with('user')->where('user_id', $user)->paginate(5);
 
-        return view('home', compact('data', 'hitungPengajuan','hitung'));
+        return view('home', compact(['data', 'hitungPengajuan','hitung', 'getTotalPengajuanUser', 'user']));
     }
 }
