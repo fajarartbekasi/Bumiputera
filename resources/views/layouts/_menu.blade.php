@@ -99,7 +99,7 @@
                                document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a href="{{route('customer.edit-data', $user)}}" class="dropdown-item" >
+                            <a href="{{route('customer.edit-data', Auth()->user()->id)}}" class="dropdown-item" >
                                 update akun
                             </a>
 
