@@ -91,9 +91,18 @@ Route::group(['prefix' => 'kasie'], function(){
     route::get('formulir/edit-data/{type}', 'Kasie\Types\ValidasiController@edit')->name('kasie.formulir.edit-data');
 
     /**
+     * tampilkan form edit petugas
+     */
+    route::get('formulir/edit-data/user/{user}','Kasie\Invitation\ValidasiController@edit')->name('kasie.formulir.edit-data.user');
+
+    /**
      * simpan perubahan type dan premi kedalam database
      */
     route::put('update/data/{type}', 'Kasie\Types\ValidasiController@update')->name('kasie.update.data');
+    /**
+     * update data user
+     */
+    route::patch('update/data/user/{user}', 'Kasie\Invitation\ValidasiController@update')->name('kasie.update.data.user');
 
     /**
      * hapus data type dan premi
@@ -114,6 +123,7 @@ Route::group(['prefix' => 'kasie'], function(){
            * detail informasi pengajuan baru
            */
           route::get('detail/informasi/penutupan/status/waitting-list/{pengajuan}', 'Kasie\Data\Permintaan\PermintaanController@show')->name('kasie.cek.detail.informasi.penutupan.status.waitting-list');
+
     });
     /**
      * update status pengajuan customer dari waitting list
@@ -144,6 +154,17 @@ Route::group(['prefix' => 'kasie'], function(){
          * cek data petugas
          */
         route::get('petugas', 'Kasie\Invitation\PetugasController@index')->name('kasie.invitations.petugas');
+
+        /**
+         * invite petugas
+         */
+
+         route::get('new/petugas', 'Kasie\Invitation\PetugasController@create')->name('kasie.invitations.new.petugas');
+
+         /**
+          * simpan data petugas dan customer baru
+          */
+          route::post('save/invitation', 'Kasie\Invitation\ValidasiController@store')->name('kasie.invitations.save.invitation');
     });
 });
 
@@ -176,6 +197,23 @@ Route::group(['prefix' => 'customer'], function(){
      * kirim bukti pembayaran
      */
     route::put('kirim/bukti-pembayaran/{pengajuan}', 'Customers\PembayaranController@update')->name('customer.kirim.bukti-pembayaran');
+    /**
+     * ambil formulir tambah customer
+     */
+    route::get('ambil-formulir/registrasi', 'Customer\Invitation\CustomerController@create')->name('customer.ambil-formulir.registrasi');
+    /**
+     * simpan data petugas dan customer baru
+    */
+    route::post('save/akun-baru', 'Customer\Invitation\ValidasiController@store')->name('customer.save.akun-baru');
+
+    /**
+     * tampilkan form edit customer
+     */
+    route::get('edit-data/{user}', 'Customer\Invitation\ValidasiController@edit')->name('customer.edit-data');
+    /**
+     * update akun customer
+     */
+    route::patch('update/akun/{user}', 'Customer\Invitation\ValidasiController@update')->name('customer.update.akun');
 
 });
 

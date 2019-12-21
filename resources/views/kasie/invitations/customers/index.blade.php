@@ -11,7 +11,6 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>Join Date</th>
-                            <th>Manage</th>
                         </tr>
                     </thead>
                 </table>
@@ -33,7 +32,6 @@
         {mData : 'name', name:'name'},
         {mData : 'email', name:'email'},
         {mData : 'created_at', name:'created_at'},
-        {mData : 'action', name:'action', orderable: false, seacrhabl: false},
         ]
         });
     })

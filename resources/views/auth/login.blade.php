@@ -63,14 +63,8 @@
                 <div class="card-header">
                     <div class="d-flex align-item-center">
                         <h6 class="text-muted mr-2">New to Bumida ?</h6>
-                        <a href="http://" class="text-info">
+                        <a href="{{ route('customer.ambil-formulir.registrasi') }}" class="text-info">
                             <h6 class="text-muted">SignIn Now »</h6>
-                        </a>
-                    </div>
-                    <div class="d-flex align-item-center">
-                        <h6 class="text-muted mr-2">Already using Twitter via text message?</h6>
-                        <a href="http://" class="text-info">
-                            <h6 class="text-muted">Activate your account »</h6>
                         </a>
                     </div>
                 </div>
