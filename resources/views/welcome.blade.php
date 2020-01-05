@@ -4,25 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Bumiptera</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
         <style>
-            html, body {
-                background-color: #008CCC;
+            html {
+                background: url(banner/logo.png) no-repeat center center fixed;
+                /* background-size: 150px; */
+                background-size: 110%;
+                color: #9ea7aa;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
-            }
+                }
             .text-1{
                 color: #FFFFFF;
             }
             .text-2 {
-                color: #B3D4FC;
+                color: #29434e;
             }
             .text-3{
                 color: #8ABAF6;
@@ -58,7 +61,7 @@
             }
 
             .links > a {
-                color: #ffffff;
+                color: #29434e;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
