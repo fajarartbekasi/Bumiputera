@@ -149,8 +149,8 @@
                 </div>
             </div>
         </nav>
-
-        <main role="main">
+        <div id="app">
+            <main role="main">
             <section class="jumbotron text-right">
                 <div class="container">
                     <h1 class="jumbotron-heading font-weight-bold mb-4">Bumiputera1997</h1>
@@ -246,6 +246,7 @@
             </div>
 
         </main>
+        </div>
 
         <footer class="text-muted">
             <div class="container">

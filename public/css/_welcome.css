@@ -11359,7 +11359,7 @@ a.text-dark:focus {
 .jumbotron {
   padding: 3rem 14rem;
   margin-bottom: 2rem;
-  background-image: url(/images/logo.png?34b01ab934bae6e0963c2f1a515bc6ba);
+  background-image: url("/../Bumiputera/public/logo/logo.png");
   background-size: 99%;
 }
 

@@ -9,10 +9,10 @@ Silahkan anda melakukan pembayaran sebesar
 Rp. {{number_format($pengajuan->premi , 2)}}
 
 silahkan melakukan upload bukti transaksi pembayaran anda melalui link dibawah ini
-@component('mail::button', ['url' => "http://bumiputera.test/customer/ambil/formulir/bukti-pembayaran/{$pengajuan->id}"])
+@component('mail::button', ['url' => "http://localhost/Bumiputera/customer/ambil/formulir/bukti-pembayaran/{$pengajuan->id}"])
 Button Text
 @endcomponent
 
 Thanks,<br>
-{{ config('app.name') }}
+PT. Asuransi Umum Bumida 1967
 @endcomponent
