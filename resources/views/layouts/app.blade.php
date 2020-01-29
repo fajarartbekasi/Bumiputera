@@ -20,13 +20,14 @@
     r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);
     </script>
 </head>
-<body>
+<body class="bg-white">
     <div id="app">
         @include('layouts._menu')
         <main class="main">
             @include('flash::message')
             @include('layouts._errors')
             @yield('content')
+
         </main>
     </div>
 

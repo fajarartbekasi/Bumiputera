@@ -29,7 +29,7 @@ class PengajuanpolisMail extends Mailable
      */
     public function build()
     {
-        return $this->from('bumida@gmail.com', 'Bumiputera muda')
+        return $this->from('bumida@gmail.com', 'PT. Asuransi Umum Bumida 1967')
                     ->markdown('email.pengajuanpolis')
                     ->with('pengajuan', $this->pengajuan);
     }

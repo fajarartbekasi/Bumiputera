@@ -13,6 +13,9 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 @auth
+                    <li class="nav-item">
+                        <a href="{{route('home')}}" class="nav-link text-muted @yield('jenis-asuransi')">home</a>
+                    </li>
                     @role('kasie teknik')
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle text-muted @yield('kategori')" href="#" role="button" data-toggle="dropdown"
@@ -67,11 +70,11 @@
                             <a href="{{route('kasir.cek.data.pembayaran')}}" class="nav-link  text-muted @yield('pembayaran')">Data pembayaran</a>
                         </li>
                     @endrole
-
+                        <li class="nav-item">
+                            <a href="{{route('customer.lihat.jenis-asuransi')}}" class="nav-link text-muted @yield('jenis-asuransi')">Asuransi</a>
+                        </li>
                     @endauth
-                    <li class="nav-item">
-                        <a href="{{route('customer.lihat.jenis-asuransi')}}" class="nav-link text-info @yield('jenis-asuransi')">Cek Jenis Asuransi</a>
-                    </li>
+
                 </ul>
 
 
@@ -99,7 +102,7 @@
                                document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
-                            <a href="{{route('customer.edit-data', $user)}}" class="dropdown-item" >
+                            <a href="{{route('customer.edit-data', Auth()->user()->id)}}" class="dropdown-item" >
                                 update akun
                             </a>
 

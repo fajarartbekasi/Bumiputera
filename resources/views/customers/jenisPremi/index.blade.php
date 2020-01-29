@@ -1,45 +1,74 @@
 @extends('layouts.app')
 
 @section('content')
-        <div class="container py-4">
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <div class="row">
-                        @forelse ($types as $type)
-                            <div class="col-md-4 text-center">
-                                <div class="card border-0 shadow">
-                                    <div class="card-body">
-                                        @if($type->name == 'Motor KOE')
-                                            @include('svg.motor')
-                                        @elseif($type->name == "Mobil KOE")
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 20 20">
-                                                <path fill="#6c757d"
-                                                      d="M2 14v-3H1a1 1 0 0 1-1-1 1 1 0 0 1 1-1h1l4-7h8l4 7h1a1 1 0 0 1 1 1 1 1 0 0 1-1 1h-1v6a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H5v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-3zm13.86-5L13 4H7L4.14 9h11.72zM5.5 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm9 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                                            </svg>
-                                        @elseif($type->name == 'Siswa / Mahasiswa KOE')
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 20 20">
-                                                <path fill="#6c757d"
-                                                    d="M5 5a5 5 0 0 1 10 0v2A5 5 0 0 1 5 7V5zM0 16.68A19.9 19.9 0 0 1 10 14c3.64 0 7.06.97 10 2.68V20H0v-3.32z" />
-                                            </svg>
-                                        @endif
-                                        @guest
-                                            <div class="text-center py-3">
-                                                <a href="{{route('login')}}" class="btn btn-outline-info ">Please SignIn</a>
-                                            </div>
-                                        @else
-                                            <div class="text-center py-3">
-                                                <h4 class="text-muted">{{$type->name}}</h4>
-                                                <a href="{{route('customer.details.informasi.jenis-asuransi', $type->id)}}" class="btn btn-outline-info ">Ambil Formulir</a>
-                                            </div>
-                                        @endguest
-                                    </div>
-                                </div>
+<section class="jumbotron text-right">
+    <div class="container">
+    </div>
+</section>
+<div class="pt-3">
+    <div class="container">
+        <div class="pt-3 mb-3 text-center">
+            <h3>Nikmati Layanan Asuransi Terbaik dari kami</h3>
+        </div>
+        <div class="row">
+            @forelse($types as $type)
+                <div class="col-md-4">
+                    <div class="card border-0">
+                        <div class="card-header bg-white border-0">
+                            <h3 class="text-info text-center">{{$type->name}}</h3>
+                        </div>
+                        <div class="card-body ">
+                            <div class="d-flex justify-content-center">
+                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                                    width="150" height="150" viewBox="0 0 1136.000000 1280.000000"
+                                    preserveAspectRatio="xMidYMid meet">
+                                    <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
+                                    fill="#000000" stroke="none">
+                                        <path d="M5450 11879 c-459 -52 -892 -262 -1217 -591 -180 -181 -290 -337
+                                        -397 -559 -378 -785 -218 -1720 401 -2336 316 -315 733 -521 1170 -578 132
+                                        -17 391 -20 513 -5 382 48 749 202 1043 439 367 297 629 727 722 1186 120 594
+                                        -29 1213 -405 1684 -341 427 -840 701 -1382 760 -112 13 -338 12 -448 0z"/>
+                                        <path d="M4285 7773 c-22 -9 -87 -34 -143 -56 l-104 -39 -132 -132 c-336 -333
+                                        -540 -730 -641 -1245 -25 -132 -55 -384 -55 -470 l0 -49 78 -17 c164 -36 307
+                                        -120 440 -259 258 -269 404 -652 437 -1152 l6 -90 -93 -79 c-51 -43 -97 -82
+                                        -101 -86 -5 -4 -3 -17 3 -29 20 -38 15 -114 -10 -155 -44 -72 -154 -98 -221
+                                        -52 -51 34 -79 82 -79 134 0 60 25 110 69 138 50 32 90 39 139 22 l42 -15 85
+                                        60 c97 68 92 50 75 233 -50 541 -295 987 -637 1159 -127 63 -315 85 -448 51
+                                        -400 -103 -709 -568 -774 -1167 -6 -54 -11 -126 -11 -160 l1 -63 76 -51 c70
+                                        -47 79 -51 109 -42 72 19 158 -28 189 -104 42 -106 -39 -218 -158 -218 -116 0
+                                        -197 139 -138 236 l19 32 -89 76 -89 77 0 53 c0 333 122 753 295 1015 135 205
+                                        333 366 509 417 l64 18 6 101 c44 665 257 1221 622 1625 l59 64 -98 -52 c-517
+                                        -276 -981 -682 -1340 -1174 -415 -569 -692 -1277 -785 -2009 l-19 -144 65 -95
+                                        c629 -919 1723 -1497 3167 -1674 404 -50 1062 -71 1475 -47 1268 74 2243 391
+                                        3000 977 224 173 539 507 710 754 l52 75 -6 79 c-17 211 -93 555 -183 829
+                                        -126 387 -279 699 -508 1042 -334 499 -751 905 -1265 1233 -124 79 -350 205
+                                        -350 195 0 -3 32 -39 71 -81 205 -220 395 -529 514 -835 37 -97 107 -331 117
+                                        -391 2 -15 18 -22 73 -33 84 -16 212 -77 278 -132 101 -84 179 -208 212 -336
+                                        19 -76 19 -224 0 -300 -55 -218 -239 -404 -455 -460 -84 -22 -226 -23 -309 -1
+                                        -209 54 -381 215 -447 419 -38 118 -38 267 0 384 59 182 201 330 380 398 72
+                                        27 70 14 20 190 -119 414 -338 786 -644 1096 -159 161 -394 348 -414 329 -2
+                                        -3 -300 -529 -661 -1170 -361 -641 -666 -1180 -677 -1198 l-20 -33 -580 1083
+                                        c-319 596 -608 1136 -641 1200 -39 73 -68 117 -77 117 -8 -1 -33 -8 -55 -16z
+                                        m2705 -3123 l0 -210 210 0 210 0 0 -180 0 -180 -210 0 -210 0 0 -210 0 -210
+                                        -180 0 -180 0 0 210 0 210 -215 0 -215 0 0 180 0 180 215 0 215 0 0 210 0 210
+                                        180 0 180 0 0 -210z"/>
+                                        <path d="M8140 5981 c-142 -46 -234 -134 -279 -269 -84 -247 95 -517 357 -539
+                                        125 -10 237 31 328 121 221 222 127 593 -173 686 -79 24 -160 25 -233 1z"/>
+                                    </g>
+                                </svg>
                             </div>
-                        @empty
-
-                        @endforelse
+                        </div>
+                        <div class="card-footer border-0 bg-white d-flex justify-content-center">
+                            <a href="{{route('customer.details.informasi.jenis-asuransi', $type->id)}}" class="btn btn-info">
+                                Detail information
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @empty
+
+            @endforelse
         </div>
+    </div>
+</div>
 @endsection

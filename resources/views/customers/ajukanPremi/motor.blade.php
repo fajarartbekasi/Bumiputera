@@ -86,7 +86,11 @@
                                 Motor KOE
                             </h5>
                             <div class="ml-auto">
-                                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-xl">Ajukan Permintaan</button>
+                                @guest
+                                    <a href="{{route('login')}}" class="btn btn-outline-info">Login</a>
+                                @else
+                                    <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target=".bd-example-modal-xl">Ajukan Permintaan</button>
+                                @endguest
                             </div>
                         </div>
                         <table class="table table-borderless">

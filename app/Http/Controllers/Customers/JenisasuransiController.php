@@ -68,6 +68,9 @@ class JenisasuransiController extends Controller
          */
         $type = Type::find($id);
 
+        $this->validate($request, [
+            'no_polisi' => 'required|exists:pengajuans,no_polisi',
+        ]);
         /**
          * jika ditemukan lakukan foreach
          */
