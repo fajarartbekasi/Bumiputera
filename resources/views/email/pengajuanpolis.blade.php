@@ -9,7 +9,7 @@ Silahkan anda melakukan pembayaran sebesar
 Rp. {{number_format($pengajuan->premi , 2)}}
 
 silahkan melakukan upload bukti transaksi pembayaran anda melalui link dibawah ini
-@component('mail::button', ['url' => "http://localhost/Bumiputera/customer/ambil/formulir/bukti-pembayaran/{$pengajuan->id}"])
+@component('mail::button', ['url' => "https://bumida1967.site/customer/ambil/formulir/bukti-pembayaran/{$pengajuan->id}"])
 Button Text
 @endcomponent
 
