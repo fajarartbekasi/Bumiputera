@@ -153,7 +153,7 @@
             <main role="main">
             <section class="jumbotron text-right">
                 <div class="container">
-                    <h1 class="jumbotron-heading font-weight-bold mb-4">Bumiputera1997</h1>
+                    <h1 class="jumbotron-heading font-weight-bold mb-4">Bumiputera1967</h1>
                     <p>
                         <a href="#" class="btn btn-primary my-2">Bergabung Bersama Kami</a>
                         <a href="#" class="btn btn-secondary my-2">Lihat Jenis Asuransi</a>
