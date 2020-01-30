@@ -332,8 +332,8 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <p class="text-muted">Tentang Bumiputera1997</p>
-                        <p>Apa itu Bumiputera1997 ?</p>
+                        <p class="text-muted">Tentang Bumiputera1967</p>
+                        <p>Apa itu Bumiputera1967 ?</p>
                         <p>Hubungi Kami</p>
                         <p>Karir</p>
                         <p>Artikel</p>
