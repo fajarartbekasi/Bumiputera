@@ -17,11 +17,11 @@ class PermintaanController extends Controller
         return Datatables::of($dataPengajuan)
                     ->addColumn('action', function($row){
                         return '
-                                <button class="btn btn-xs btn-danger btn-delete btn-sm" data-remote="http://bumiputera.test/formulir/hapus/premis/' . $row->id . '">
+                                <button class="btn btn-xs btn-danger btn-delete btn-sm" data-remote="https://bumida1967.site/formulir/hapus/premis/' . $row->id . '">
                                     <i class="glyphicon glyphicon-trash"></i>
                                     Delete
                                 </button>
-                                <a href="http://bumiputera.test/kasie/cek/detail/informasi/penutupan/status/waitting-list/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Show</a>
+                                <a href="https://bumida1967.test/kasie/cek/detail/informasi/penutupan/status/waitting-list/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Show</a>
                             ';
                         })->editColumn('id', 'ID: @{{$id}}')->make(true);
     }

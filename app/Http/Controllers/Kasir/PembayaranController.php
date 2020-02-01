@@ -21,7 +21,7 @@ class PembayaranController extends Controller
         return Datatables::of($pembayaran)
                          ->addColumn('action', function($row){
             return '
-                    <a href="http://bumiputera.test/kasir/cek/details/informasi/pembayaran/pengajuan/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Show</a>
+                    <a href="https://bumida1967.test/kasir/cek/details/informasi/pembayaran/pengajuan/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Show</a>
                 ';
             })->editColumn('id', 'ID: @{{$id}}')->make(true);
     }
