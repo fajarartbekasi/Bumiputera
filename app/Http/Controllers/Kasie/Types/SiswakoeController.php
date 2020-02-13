@@ -17,8 +17,8 @@ class SiswakoeController extends Controller
 
         return Datatables::of($siswamahaiswaKoe)->addColumn('action', function($row){
             return '
-                    <button class="btn btn-xs btn-danger btn-delete" data-remote="https://bumida1967.site/kasie/hapus/type/premi/' . $row->id . '"><i class="glyphicon glyphicon-trash"></i>Delete</button>
-                    <a href="https://bumida1967.site/kasie/formulir/edit-data/'.$row->id.'" class="btn btn-xs btn-primary"/>Edit</a>
+                    <button class="btn btn-xs btn-danger btn-delete" data-remote="http://Bumiputera.test/public/kasie/hapus/type/premi/' . $row->id . '"><i class="glyphicon glyphicon-trash"></i>Delete</button>
+                    <a href="http://Bumiputera.test/public/kasie/formulir/edit-data/'.$row->id.'" class="btn btn-xs btn-primary"/>Edit</a>
                 ';
             })->editColumn('id', 'ID: @{{$id}}')->make(true);
     }

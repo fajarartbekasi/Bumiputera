@@ -20,11 +20,11 @@ class PengajuanpolisController extends Controller
         return Datatables::of($pengajuanPolis)
                     ->addColumn('action', function($row){
                         return '
-                                <button class="btn btn-xs btn-danger btn-delete btn-sm" data-remote="https://bumida1967.site/formulir/hapus/premis/' . $row->id . '">
+                                <button class="btn btn-xs btn-danger btn-delete btn-sm" data-remote="http://Bumiputera.test/public/formulir/hapus/premis/' . $row->id . '">
                                     <i class="glyphicon glyphicon-trash"></i>
                                     Delete
                                 </button>
-                                <a href="https://bumida1967.site/staff/cek/detail/pengajuan/polis/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Show</a>
+                                <a href="http://Bumiputera.test/public/staff/cek/detail/pengajuan/polis/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Show</a>
                             ';
                         })->editColumn('id', 'ID: @{{$id}}')->make(true);
     }

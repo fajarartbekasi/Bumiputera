@@ -20,7 +20,7 @@ class PetugasController extends Controller
                     ->addColumn('action', function($row){
                         return '
 
-                                <a href="https://bumida1967.site/kasie/formulir/edit-data/user/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Edit</a>
+                                <a href="http://Bumiputera.test/public/kasie/formulir/edit-data/user/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Edit</a>
                             ';
                         })->editColumn('id', 'ID: @{{$id}}')->make(true);
     }

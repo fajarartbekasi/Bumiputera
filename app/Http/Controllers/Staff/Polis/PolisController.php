@@ -18,7 +18,7 @@ class PolisController extends Controller
         return Datatables::of($cetakPolis)
                     ->addColumn('action', function($row){
                     return '
-                            <a href="https://bumida1967.site/staff/cetak/polis/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Cetak Polis</a>
+                            <a href="http://Bumiputera.test/public/staff/cetak/polis/'.$row->id.'" class="btn btn-xs btn-primary btn-sm"/>Cetak Polis</a>
                         ';
         })->editColumn('id', 'ID: @{{$id}}')->make(true);
     }
